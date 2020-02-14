@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<button id="lockButton">	&#128275;
+</button>
+
+<div class="playground">
+  <div class="plane_div-placeholder tpl-placeholder">
+  </div>
+  <!-- plane_divs to sort -->
+  <div class="plane_div" draggable="true">
+      <img width="250" height="150" src="https://source.unsplash.com/random/250x150" draggable="false"/>
+      <div class="plane_div-text">
+        <h3>Some Title</h3>
+        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam...</span>
+      </div>
+  </div>
+    <div class="plane_div" draggable="true">
+      <img width="250" height="150" src="https://source.unsplash.com/category/buildings/250x150" draggable="false"/>
+      <div class="plane_div-text">
+        <h3>Some Title</h3>
+        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam...</span>
+      </div>
+  </div>  
+    <div class="plane_div" draggable="true">
+      <img width="250" height="150" src="https://source.unsplash.com/collection/190727/250x150" draggable="false"/>
+      <div class="plane_div-text">
+        <h3>Some Title</h3>
+        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam...</span>
+      </div>
+  </div>  
+    <div class="plane_div" draggable="true">
+      <img width="250" height="150" src="https://source.unsplash.com/user/erondu/likes/250x150" draggable="false"/>
+      <div class="plane_div-text">
+        <h3>Some Title</h3>
+        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam...</span>
+      </div>
+  </div>  
+    <div class="plane_div" draggable="true">
+      <img width="250" height="150" src="https://source.unsplash.com/user/erondu/250x150" draggable="false"/>
+      <div class="plane_div-text">
+        <h3>Some Title</h3>
+        <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam...</span>
+      </div>
+  </div>
+
+  <!-- a plane_div that is not draggable -->
+    <div class="plane_div" title="not draggable. sorry ;-)" draggable="false">
+    
+      <div class="plane_div-head">
+        <span class="name">jet-plugin-classList</span>
+        <!-- https://stackoverflow.com/questions/22932422/get-github-avatar-from-email-or-name -->
+                <img class="author" width="50" height="50" title="Max Mustermann" src="https://github.com/github.png?size=50" draggable="false"/>
+      </div>
+      
+      <div class="plane_div-text">
+        <h3>ClassList</h3>
+        <span>Plugin to maniplute the elements  classList.</span>
+      </div>
+  </div>   
+</div>
+
+{%endblock%}

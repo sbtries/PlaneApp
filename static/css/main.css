@@ -1,0 +1,97 @@
+.container {
+    margin-top: 50px;
+   }
+    
+   .nav {
+    margin: 13px 0 0 0;
+   }
+* {
+  background-color: aquamarine;
+}
+* { box-sizing: border-box; }
+template { display: none; /* IE support */}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.playground {
+  background: #eee;
+  padding: 4rem 4rem;
+}
+
+/** clear floating **/
+.playground::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.plane_div {
+  display: inline-block;
+  float: left; /** optional, better alignment for multi-row use cases -> or use flexbox */ 
+  background: #fff;
+  width: 250px;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,.15), 0 0 4px 0 rgba(0,0,0,.2), 0 12px 12px 0 rgba(0,0,0,.15);
+  margin: 0.5rem 1rem;
+  transition: box-shadow .2s ease-in-out; 
+}
+
+.plane_div[draggable=true] {
+  cursor: move;
+}
+
+.plane_div[draggable=false] {
+  cursor: not-allowed;
+}
+
+/* Prevent the text contents of draggable elements from being selectable. Also from Elements which are explicit not draggable */
+.playground {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.plane_div:hover {
+  box-shadow: 0 0 18px 0 rgba(0,0,0,.1), 0 0 36px 0 rgba(0,0,0,.15), 0 36px 36px 0 rgba(0,0,0,.2);
+}
+
+.plane_div > img { padding: 0; margin: 0; }
+.plane_div-text { padding: 0.75rem; }
+.plane_div-text > h3 { 
+  margin: 0 0 0.25rem 0; 
+  font-size: 1rem; 
+  line-height: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+}
+.plane_div-text > h3:hover { color: green; }
+.plane_div-text > span { 
+  margin: 0; 
+  font-size: 0.8125rem; 
+  line-height: 1rem;
+  font-weight: 200;
+}
+
+.plane_div-placeholder {position: fixed; display: inline-block; background: #ddd; }
+.plane_div.moving { box-shadow: 0 0 2px 0 rgba(0,0,0,0), 0 0 4px 0 rgba(0,0,0,0), 0 12px 12px 0 rgba(0,0,0,0); }
+
+.plane_div-head{
+  background: #eee;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  font-family: Menlo, "Courier New";
+  position: relative;
+}
+
+.author {
+  position: absolute;
+  display: inline-block;
+  right: 1rem;
+  bottom: -25px;
+  border-radius: 50px;
+}
